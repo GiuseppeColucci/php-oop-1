@@ -24,37 +24,54 @@ class AutoNolegio {
         $this->km = $km;
         $this->interni = $interni;
     }
-    public function addBook(Book $book) {
-        $this->books[] = $book;
+    public function addCar(Auto $newCarss) {
+        $this->newCar[] = $newCarss;
+    }
+    public function getCar() {
+        return $this->newCar;
     }
 }
 
-$Nolegio_1 = new AutoNolegio('Mercedes', 'CLS', ' km 46,000','pelle');
-echo $Nolegio_1->marca . '<br/>';
-echo $Nolegio_1->modello . '<br/>';
-echo $Nolegio_1->km . '<br/>';
-echo $Nolegio_1->interni . '<br/>';
+//parte bonus
+$RolceRoils = new Auto('RolceRoils', 'Gost', 'km 50','pelle di cammello');
 
-echo '<br/>';
 
-$Nolegio_2 = new AutoNolegio('BMW', '525', ' km 60,000','pelle di daino');
-echo $Nolegio_2->marca . '<br/>';
-echo $Nolegio_2->modello . '<br/>';
-echo $Nolegio_2->km . '<br/>';
-echo $Nolegio_2->interni . '<br/>';
+$nuovaMacchina = new AutoNolegio('Nuova macchina');
 
-echo '<br/>';
+$nuovaMacchina->addCar($RolceRoils);
 
-$Nolegio_3 = new AutoNolegio('Astonmartin', 'DBS', ' km 146,000','pelle di cammello con inserti viola');
-echo $Nolegio_3->marca . '<br/>';
-echo $Nolegio_3->modello . '<br/>';
-echo $Nolegio_3->km . '<br/>';
-echo $Nolegio_3->interni . '<br/>';
+print_r($nuovaMacchina->getCar());
 
-echo '<br/>';
 
-$Nolegio_4 = new AutoNolegio('Bentley', 'Continental GT', ' km 26,000','pelle di struzzo');
-echo $Nolegio_4->marca . '<br/>';
-echo $Nolegio_4->modello . '<br/>';
-echo $Nolegio_4->km . '<br/>';
-echo $Nolegio_4->interni . '<br/>';
+
+
+
+// $Nolegio_1 = new AutoNolegio('Mercedes', 'CLS', ' km 46,000','pelle');
+// echo $Nolegio_1->marca . '<br/>';
+// echo $Nolegio_1->modello . '<br/>';
+// echo $Nolegio_1->km . '<br/>';
+// echo $Nolegio_1->interni . '<br/>';
+
+// echo '<br/>';
+
+// $Nolegio_2 = new AutoNolegio('BMW', '525', ' km 60,000','pelle di daino');
+// echo $Nolegio_2->marca . '<br/>';
+// echo $Nolegio_2->modello . '<br/>';
+// echo $Nolegio_2->km . '<br/>';
+// echo $Nolegio_2->interni . '<br/>';
+
+// echo '<br/>';
+
+// $Nolegio_3 = new AutoNolegio('Astonmartin', 'DBS', ' km 146,000','pelle di cammello con inserti viola');
+// echo $Nolegio_3->marca . '<br/>';
+// echo $Nolegio_3->modello . '<br/>';
+// echo $Nolegio_3->km . '<br/>';
+// echo $Nolegio_3->interni . '<br/>';
+
+// echo '<br/>';
+
+// $Nolegio_4 = new AutoNolegio('Bentley', 'Continental GT', ' km 26,000','pelle di struzzo');
+// echo $Nolegio_4->marca . '<br/>';
+// echo $Nolegio_4->modello . '<br/>';
+// echo $Nolegio_4->km . '<br/>';
+// echo $Nolegio_4->interni . '<br/>';
